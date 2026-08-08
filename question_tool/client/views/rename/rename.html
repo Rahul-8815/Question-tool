@@ -1,0 +1,18 @@
+<template name="rename">
+	<div id="darker">
+	</div>
+	<div class="formcontainer renameformcontainer">
+		{{> close_button}}
+		<h1 class="formtitle">Edit</h1>
+		<div class="modaltopmessage renamemessage">
+			Edit your instance.
+		</div>
+		<div class="inputcontainer">
+			<input type="text" class="input" id="namebox" maxlength="40" name="tname" value="{{table.tablename}}">
+			<textarea class="input" id="descriptionbox" name="tdesc" maxlength="255" rows="2">{{table.description}}</textarea>
+			<div class="renamesubmitbutton">
+				Done
+			</div>
+		</div>
+	</div>
+</template>

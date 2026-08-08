@@ -1,0 +1,24 @@
+<template name="login">
+	<div id="darker">
+	</div>
+	<div class="formcontainer">
+		{{> close_button}}
+		<h1 class="formtitle">Login</h1>
+		<div class="modaltopmessage">
+			Login to save your information, add favorites, and create Question Tool instances.
+		</div>
+		<div class="inputcontainer">
+			<input type="text" id="loginemail" spellcheck="false" class="input" placeholder="Email...">
+			<input type="password" id="passwordbox" class="input" placeholder="Password...">
+			<div class="modalbottommessage">
+				Don't have an account? <p class="modalemphasis" id="registeremphasis">Register</p>
+			</div>
+			<div class="modalbottommessage">
+				Forgot password? <p class="modalemphasis" id="forgotpasswordemphasis">Send instructions</p>
+			</div>
+			<div id="loginsubmitbutton">
+				Login
+			</div>
+		</div>
+	</div>
+</template>

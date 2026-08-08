@@ -1,0 +1,413 @@
+$border-radius: 4px;
+$hidden-question-opacity: 0.5;
+$new-question-color: #27ae60;
+$stale-question-color: #e9edf0;
+$hidden-question-color: rgba(255,0,0,$hidden-question-opacity);
+$popular-question-color: #f1c40f;
+
+.question-wrapper {
+  display: flex;
+  width: 22em;
+  cursor: auto;
+  margin: 0 0.5em;
+
+  &, div, span, a {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
+.question {
+  position: relative;
+  background-color: #fff;
+	border: 1px solid #e9edf0;
+	padding: 8px 12px;
+  margin-bottom: 12px;
+  border-radius: $border-radius;
+  width: 22em;
+  word-break: break-word;
+
+  .image-icon {
+    width: 14px;
+    height: 14px;
+    margin-bottom: -2px;
+  }
+
+  &.popular-question {
+    border-color: $popular-question-color;
+  }
+
+  &.hidden-question {
+    border-color: $hidden-question-color !important;
+    opacity: $hidden-question-opacity;
+    transition-duration: 0.5s;
+  }
+
+  &.hidden-question:hover {
+    opacity: 1;
+  }
+
+  &.new-question {
+    border-color: $new-question-color;
+  }
+
+  &.stale-question {
+    border-color: $stale-question-color;
+  }
+}
+
+
+.asked-by {
+	color: #999;
+	font-size: 14px;
+  text-align: right;
+
+  .poser {
+    color: #888;
+    font-weight: 600;
+
+    a {
+      color: #888;
+    }
+  }
+}
+
+.question-toolbar {
+  display: flex;
+  color: #999;
+	font-size: 14px;
+  text-transform: lowercase;
+  justify-content: space-between;
+  margin: 4px -12px 3px -12px;
+  border-radius: 0 0 4px 4px;
+  padding: 0 12px;
+
+  > span {
+    &:not(:first-child) {
+      margin-left: 4px;
+    }
+  }
+}
+
+.replybottombutton, .anon-reply-bottom-button {
+	color: #47c3e1;
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 20px;
+}
+
+.anon-reply-bottom-button {
+  margin-left: 4px;
+}
+
+.answer {
+	background-color: #FFF;
+	width: 85%;
+	border: 2px solid #0F0;
+	margin: .5% 2% .5% 5%;
+	padding: 1%;
+}
+
+.bottomleft {
+	display: inline-block;
+	width: 10.6em;
+}
+
+.bottomright {
+	display: inline-block;
+}
+
+#bottomquestionarea {
+	background-color: #f2f4f5;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border-radius: 0 0 5px 5px;
+	padding: 0 25px;
+	margin: 0 auto;
+}
+
+.countarea {
+	margin-top: 16px;
+	font-weight: 300;
+	color: #999999;
+	font-size: 15px;
+  margin-right: 8px;
+}
+
+.facebookbutton {
+	background-image: url('/facebook.png');
+
+  &:hover {
+		background-image: url('/facebook_blue.png');
+	}
+}
+
+.twitterbutton {
+  background-image: url('/twitter.png');
+
+  &:hover {
+		background-image: url('/twitter_blue.png');
+	}
+}
+
+.hiddenanswers {
+	display: none;
+}
+
+.postername {
+	margin: 0;
+	padding: 0;
+	font-weight: 600;
+	color: #777777;
+	text-decoration: none;
+}
+
+.quesitonbottom {
+	margin-top: 6px;
+	position: relative;
+}
+
+.questiontext {
+  font-size: 1.04rem;
+	margin-top: 0;
+	font-weight: 600;
+	color: #333333;
+	margin-bottom: 4px;
+}
+
+.questionLink {
+	color: #2980b9;
+	text-decoration: underline;
+
+  &:hover {
+		color: #3498db;
+	}
+}
+
+.replychecklabel {
+	margin-top: 3px;
+	padding: 0;
+	text-align: left;
+	font-weight: 400;
+	color: #888888;
+	font-size: 14px;
+}
+
+.questionbadgecontainer {
+	height: 16px;
+}
+
+.replybottom {
+	display: none;
+	margin: 0;
+}
+
+.replybottomcheck {
+	padding-top: 25px;
+}
+
+.replyarea {
+  margin-top: 8px;
+  border-radius: 4px;
+	display: block;
+	border: 1px solid #aaa;
+	color: #666;
+	font-weight: 300;
+	font-size: 14px;
+	height: 65px;
+	outline: 0;
+	resize: none;
+  width: 100%;
+  padding: 8px 10px;
+}
+
+.replyname {
+	outline: 0;
+	margin: 0;
+	border-left: 0.1em solid #e9edf0;
+	border-right: 0.1em solid #e9edf0;
+	border-bottom: 0.1em solid #e9edf0;
+	border-top: 0;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.replyemail {
+	margin: 0;
+	padding: 0.5em 0.26em;
+	outline: 0;
+	border-left: 0.1em solid #e9edf0;
+	border-right: 0.1em solid #e9edf0;
+	border-bottom: 0.1em solid #e9edf0;
+	border-top: 0;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.replycounter {
+	font-weight: 300;
+	color: #999999;
+	font-size: 14px;
+	text-align: right;
+	float: right;
+}
+
+.replyfields {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.stalequestion {
+	opacity: .7;
+}
+
+.stale-icon {
+	background-image: url('/stalequestion.png');
+}
+
+.triangle {
+  cursor: pointer;
+}
+
+.vc0 {
+  .triangle {
+    border-bottom: 9px solid #008;
+  }
+}
+
+.vc1 {
+  .triangle {
+    border-bottom: 9px solid #06a;
+  }
+}
+
+.vc2 {
+  .triangle {
+    border-bottom: 9px solid #088;
+  }
+}
+
+.vc3 {
+  .triangle {
+    border-bottom: 9px solid #070;
+  }
+}
+
+.vc4 {
+  .triangle {
+    border-bottom: 9px solid #9a0;
+  }
+}
+
+.vc5 {
+  .triangle {
+    border-bottom: 9px solid #b70;
+  }
+}
+
+.vc6 {
+  .triangle {
+    border-bottom: 9px solid #c00;
+  }
+}
+
+.vc7 {
+  .triangle {
+    border-bottom: 9px solid #f04;
+  }
+}
+
+.vc8 {
+  .triangle {
+    border-bottom: 9px solid #f04;
+  }
+}
+
+.new-icon {
+	background-image: url('/newquestion.png');
+}
+
+.popular-icon {
+  background-image: url('/star.png');
+}
+
+.vote-and-options {
+  span {
+    margin-left: 4px;
+  }
+}
+
+.sharing {
+  span {
+    &:not(:first-child) {
+      margin-left: 4px;
+    }
+  }
+}
+
+.image-icon {
+  display: inline-block;
+  background-size: contain;
+}
+
+.triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 9px solid black;
+  margin-right: 2px;
+}
+
+.answers {
+  border-radius: 4px;
+  margin-bottom: 4px;
+
+  .question-answer {
+    margin-bottom: 4px;
+  }
+}
+
+.hiddenMessageHide, .hiddenMessage {
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 1px 4px;
+  margin: 0;
+  background: #bbb;
+	color: #fff;
+  border-radius: 4px;
+}
+
+.hiddenMessageHide {
+  display: none;
+}
+
+.answerposter {
+  font-weight: 600;
+  color: #777!important;
+}
+
+.remote-highlight:hover, input[type='checkbox'] {
+  cursor: pointer;
+}
+
+.remote-highlight {
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+.remote-highlight > input {
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  overflow: hidden;
+}

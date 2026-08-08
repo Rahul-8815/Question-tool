@@ -1,0 +1,20 @@
+<template name="combine">
+	<div id="darker">
+	</div>
+	<div class="formcontainer modifyformcontainer">
+		{{> close_button}}
+		<h1 class="formtitle">Combine</h1>
+		<div class="modaltopmessage">
+			 Combine two questions. Press "Done" when finished.
+		</div>
+		<div class="inputcontainer">
+			<textarea id="modifybox" cols="40">
+        {{firsttext}}
+        {{secondtext}}
+			</textarea>
+			<div class="combinesubmitbutton" id="{{this}}">
+				Done
+			</div>
+		</div>
+	</div>
+</template>

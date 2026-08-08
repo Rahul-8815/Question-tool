@@ -1,0 +1,17 @@
+<template name="modify">
+	<div id="darker">
+	</div>
+	<div class="formcontainer modifyformcontainer">
+		{{> close_button}}
+		<h1 class="formtitle">Modify</h1>
+		<div class="modaltopmessage">
+			Modify a question. Make edits and press "Done" when finished.
+		</div>
+		<div class="inputcontainer">
+			<textarea id="modifybox" name="comment" rows = "4" cols="40" maxlength="{{maxmodlength}}">{{questiontext}}</textarea>
+			<div class="modifysubmitbutton" id="{{this}}">
+				Done
+			</div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,14 @@
+.closecontainer {
+	cursor: pointer;
+	display: inline-block;
+	background-color: #ea6153;
+	border-radius: 5px;
+	padding: 0.3em;
+	margin: 10px 0px 0px 10px;
+	color: white;
+
+  &:hover {
+		background-color: #ed766a;
+	}
+}
+

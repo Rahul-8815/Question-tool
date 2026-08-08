@@ -1,0 +1,46 @@
+<template name="instance_div">
+  <div class="instance-wrapper">
+    <div id="{{_id}}" class="instance {{#if isFavorite}}favorite-instance {{else}} {{#if today}}today-instance{{/if}} {{#if week}}week-instance{{/if}} {{#if month}}month-instance{{/if}} {{/if}}">
+      {{#if currentUser}}
+        <div>
+        {{#if isAdmin}}
+          <span class="instancebadgecontainer admin-container">
+            <i class="fa fa-user"></i> Admin
+          </span>
+        {{else}}
+          {{#if isMod}}
+            <span class="instancebadgecontainer mod-container">
+              <i class="fa fa-users"></i> Mod
+            </span>
+          {{/if}}
+        {{/if}}
+          <span class="favebtn {{#if isFavorite}}unfavoritebutton{{else}}favoritebutton{{/if}}" id="{{_id}}" title="{{#if isFavorite}}Remove from favorites{{else}}Add to favorites{{/if}}"><i class="fa fa-{{#if isFavorite}}heart{{else}}heart-o{{/if}}"></i></span>
+        </div>
+      {{/if}}
+      <a href="{{ absolute_url }}list/{{slug}}" title="Open instance">
+      <p class="instancename">
+        {{tablename}}
+      </p>
+      <div class="descriptioncontainer">
+        <span class="instancedescription">
+  				{{strip_desc description}}
+  			</span>
+      </div>
+      </a>
+      <div class="instance-bottom">
+        <span class="posted-by-text">created by</span> <span class="postername">{{author}}</span>
+        <span class="time" title="{{date_format lasttouch}}"> {{time_format lasttouch}}</span>
+      {{#if superadmin}}
+        <div class="adminbottom">
+          <div class="superadminrenamebutton" id="{{_id}}">
+            <i class="fa fa-pencil-square"></i> Rename
+          </div>
+          <div class="superadmindeletebutton" data-instanceid="{{_id}}">
+            <i class="fa fa-trash"></i> Delete
+          </div>
+        </div>
+      {{/if}}
+      </div>
+    </div>
+  </div>
+</template>
